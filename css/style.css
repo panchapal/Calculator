@@ -1,0 +1,94 @@
+
+    /* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+.calculator {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	padding: 40px;
+	background-color: #e3e0e0;
+	border-radius: 5px;
+	box-shadow: 0px 0px 6px 6px rgb(224, 233, 231);
+}
+
+
+#display {
+	width: 100%;
+	height: 80px;
+	margin-bottom: 16px;
+	font-size: 26px;
+	text-align: right;
+}
+
+.buttons {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+}
+
+.buttons .btn {
+ padding: 15px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.btn::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+}
+
+.btn:hover {
+ color: #e8e8e8;
+}
+
+.btn:hover::before {
+ width: 100%;
+}
+
+#remove {
+	grid-column: 1 / 3;
+	background-color: #f43c3c;
+	color: black;
+    font-weight: 1000;
+    font-size: 17px;
+    border: unset;
+    border-radius: 15px;
+}
+
+#remove:hover {
+	background-color: #f96b89;
+}
+.buttons #blue{
+   background-color: rgb(112, 112, 248);
+   color: white;
+   border-radius: 15px;
+   border: unset;
+   font-weight: 1000;
+   font-size: 17px;
+}
+.buttons #blue:hover{
+    background-color: rgb(232, 112, 248);
+}
